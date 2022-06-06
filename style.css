@@ -63,7 +63,7 @@ h2 {
     transition: .5s ease-in-out;
 }
 
-a:hover {
+.social-media > a:hover {
     color: #025159;
     background-color: #5EBFAD;
     border: 1px solid #5EBFAD;
@@ -227,25 +227,21 @@ a:hover {
 
 .card {
     height: 300px;
-    width: 400px;
+    width: 300px;
     margin: 3rem 0 0 0;
-    background-image: url('./seashore.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #02444b;
+    border-radius: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
-    filter: grayscale(0.5);   
-    color: white;
-    cursor: pointer;
-    transition: 0.3s;
+    color: #5EBFAD;
+    transition: 0.6s;
 }
 
 .card-text {
     width: 40%;
     font-family: 'Bebas Neue', sans-serif;
-    color: #02444b;
+    color: #03565f;
     letter-spacing: 1px;
 }
 
@@ -258,17 +254,6 @@ a:hover {
     position: relative;
 }
 
-.card-wrapper::before {
-    content: '';
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    display: block;
-    border: 1px solid white;
-    opacity: 0;
-    transition: 0.3s;  
-}
-
 .card-wrapper h2 {
     color: white;
     font-size: 40px;
@@ -278,29 +263,28 @@ a:hover {
     transition: 0.3s;
 }
 
-.card-wrapper p {
+.card-wrapper p a {
     font-size: 0;
     visibility: hidden;
     opacity: 0;
     font-weight: bold;
     text-transform: uppercase;
     transition: 0.3s;
+    text-decoration: none;
 }
 
 .card:hover {
-    filter: unset;
+    border-radius: 50%;
+    background-color: #025159;
+    color: white;
 }
 
-.card:hover > .card-wrapper::before {
-    opacity: 1;
-    height: 250px;
-    width: 350px;
-}
-
-.card:hover > .card-wrapper p {
+.card:hover > .card-wrapper p a {
     visibility: visible;
     opacity: 1;
     font-size: 28px;
+    color: white;
+    cursor: pointer;
 }
 
 /* FOOTER */
